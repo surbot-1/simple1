@@ -55,6 +55,15 @@
             Age: document.getElementById ("ageField").value
         });
       }
+           <div id="root"<\div>
+               var ref = firebase.database().ref("User"); 
+               ref.on("value", function(snapshot) {
+               snapshot.forEach(function(element) {
+               document.querySelector('#root').innerHTML +=
+               <div>${element.val()}<\div>
+                });
+               });
+                   
     </script>
 
     
